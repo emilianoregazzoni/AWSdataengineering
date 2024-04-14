@@ -16,6 +16,11 @@ In a bucket you can store, almost wherever you want.
 
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/11f18758-3734-40a9-9c7b-6b76dcd7bf94)
 
+I decided to create the following structure in my bucket:
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/10bec00a-532f-4604-8aed-a9fe7f0efdbb)
+
+I have one folder for temporary files created by glue, a folder for data, a folder for scripts and finally a folder for athena query results (required).
 
 Then I needed to give my personal user and also to a Glue role, the privilege to full access Glue control. This is for my personal user but for also, if in the future I want to create a lambda function that executes glue, then I need to create the role y assign it.
 
