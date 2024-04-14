@@ -1,4 +1,4 @@
-# AWS data engineering project
+# AWS data engineering project :cloud:
 ## __Small hands-on project about AWS data engineer tools and concepts__
 
 In this project I decided to use some keys services from AWS to do some data engineering job. I used S3, Athena, Glue and Redshift :blush:
