@@ -1,4 +1,4 @@
-![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/75891bdb-9241-464c-969b-1080e04347f9)# AWS data engineering project :cloud:
+# AWS data engineering project :cloud:
 ## __Small hands-on project using data engineer tools from AWS__
 
 In this project I decided to use some keys services from AWS to do some data engineering jobs. I used S3, Athena, Glue and Redshift :blush:
