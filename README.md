@@ -52,8 +52,21 @@ But first, before I create the table, I needed to create the database in Glue. J
 
 Now I needed to create the table, using the Crawler, so I created a new Crawler:
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/3a02f74d-834f-448b-b52b-cfa9b9bd6e2d)
-I needed to set where the information is stored, in my case, I already created a bucket before, so I've choosen S3 and paste the route from S3 like this:
+I needed to set where the information is stored, in my case, I already created a bucket before, so I've choosen S3 and pasted the route from S3 like this:
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/4a037368-0730-4dad-8338-c1dc86b91b37)
 
+Then I needed to select the Glue role I created before to perform.
 
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/88048070-e3b2-4906-a6a1-c160d7de2b46)
+
+Then you can select if you want to run the Crawler with some periodicity or manually like I did:
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/80306e31-817c-4c21-b188-e8ff0014760f)
+
+After this, you can run the Crawler:
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/c545f8d0-3622-4166-a761-3862bbbea144)
+
+And then I saw the structure of the table created:
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/3982da1e-54ca-4534-898e-d05c4f3e0b4e)
 
