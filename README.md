@@ -16,17 +16,28 @@ In a bucket you can store, almost wherever you want.
 
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/11f18758-3734-40a9-9c7b-6b76dcd7bf94)
 
+
+
 I decided to create the following structure in my bucket:
 
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/10bec00a-532f-4604-8aed-a9fe7f0efdbb)
 
 I have one folder for temporary files created by glue, a folder for data, a folder for scripts and finally a folder for athena query results (required).
 
+## __Glue section__
+As we know, Glue is the main ETL service in AWS. You can use it for extract, transform, load data and do any transformation you want. Also is a serverless service, which means you can use it without managing any infrastructure, which is really cool and easier for anyone.
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/5e549d59-a4f8-4197-851d-315ccaf664c6)
+
+
+
+
 Then I needed to give my personal user and also to a Glue role, the privilege to full access Glue control. This is for my personal user but for also, if in the future I want to create a lambda function that executes glue, then I need to create the role y assign it.
 
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/a2c1f901-e168-436b-a484-010b8d619c0b)
 
 ### TIP
-If you want to explore AWS services, tools and so I recommend you to select just one region to work more confortable. Maybe later you can get confused about which services are being used in which region, which  could results in problems. I've choosen Ohio in the East.
+If you want to explore AWS services, tools and so I recommend you to select just one region to work more confortable. Maybe later you can get confused about which services are being used in which region, which  could results in problems. All regions offer the same services for this project, and some services are global like IAM. I've choosen Ohio in the East.
+
+
 
 
