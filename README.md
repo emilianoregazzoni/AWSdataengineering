@@ -1,7 +1,7 @@
 # AWS data engineering project :cloud:
-## __Small hands-on project about AWS data engineer tools and concepts__
+## __Small hands-on project using data engineer tools from AWS__
 
-In this project I decided to use some keys services from AWS to do some data engineering job. I used S3, Athena, Glue and Redshift :blush:
+In this project I decided to use some keys services from AWS to do some data engineering jobs. I used S3, Athena, Glue and Redshift :blush:
 
 First of all, key concept I learned from AWS Certified Cloud Practitioner, never ever use root user, you always need to create a IAM user with the least privilege possible. So I created my own user:
 
@@ -28,7 +28,8 @@ I have one folder for temporary files created by glue, a folder for data, a fold
 As we know, Glue is the main ETL service in AWS. You can use it for extract, transform, load data and do any transformation you want. Also is a serverless service, which means you can use it without managing any infrastructure, which is really cool and easier for anyone.
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/5e549d59-a4f8-4197-851d-315ccaf664c6)
 
-
+In this project I just decided to create a new column, depending on a given column. If a country has more export index, in the new column it will says "Exporting", and if a country has more import index, it will says "Importing".
+I found this simple dataset in Kaggle: https://www.kaggle.com/datasets/samira1992/countries-intermediate-dataset. Thank you Samira Shemirani.
 
 
 Then I needed to give my personal user and also to a Glue role, the privilege to full access Glue control. This is for my personal user but for also, if in the future I want to create a lambda function that executes glue, then I need to create the role y assign it.
