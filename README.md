@@ -29,7 +29,7 @@ As we know, Glue is the main ETL service in AWS. You can use it for extract, tra
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/5e549d59-a4f8-4197-851d-315ccaf664c6)
 
 In this project I just decided to create a new column, depending on a given column. If a country has more export index, in the new column it will says "Exporting", and if a country has more import index, it will says "Importing".
-I found this simple dataset in Kaggle: https://www.kaggle.com/datasets/samira1992/countries-intermediate-dataset. Thank you Samira Shemirani.
+  I found this simple dataset in Kaggle: https://www.kaggle.com/datasets/samira1992/countries-intermediate-dataset. Thank you Samira Shemirani.
 
 
 Then I needed to give my personal user and also to a Glue role, the privilege to full access Glue control. This is for my personal user but for also, if in the future I want to create a lambda function that executes glue, then I need to create the role y assign it.
