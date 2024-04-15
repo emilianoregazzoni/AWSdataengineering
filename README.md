@@ -46,12 +46,16 @@ It helps you to process the data, understand the format it cames, and transform 
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/e8cf331d-b41f-4878-9e90-f70673dbe604)
 
 But first, before I create the table, I needed to create the database in Glue. Just specify a name and set the route from S3, where you previously stored the .CSV
+
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/ed7d84c6-f723-4f2a-aed3-6a56584022b0)
+
 
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/974fba6b-419c-4b8f-a1b3-05b2ed392adc)
 
 Now I needed to create the table, using the Crawler, so I created a new Crawler:
+
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/3a02f74d-834f-448b-b52b-cfa9b9bd6e2d)
+
 I needed to set where the information is stored, in my case, I already created a bucket before, so I've choosen S3 and pasted the route from S3 like this:
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/4a037368-0730-4dad-8338-c1dc86b91b37)
 
