@@ -159,7 +159,46 @@ Then I had my Redshift service turned on.
 
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/3fb94b61-ac02-4261-9945-2c3a0951dff5)
 
-The final step of the job was the load to databaset:
+The final step of the job was the load to databaset, the idea is to choose "Drop and recreate" the table, because there is no table created. So I wanted to create the table for the first time:
 
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/2ef1eee9-6bf6-4686-873d-26d87dcd23b6)
+
+Finally the job was this:
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/72224889-8516-43c1-9902-dc231a1dfe5d)
+
+But when I ran the job, I had a problem to deal with. The job failed constantly, it said: 
+
+`VPC S3 endpoint validation failed for SubnetId: subnet-xxx. VPC: xxx. Reason: Could not find S3 endpoint or NAT gateway for subnetId:`
+
+After reading a lot and investigating I figured out that I needed to create a S3 endpoint:
+
+(https://repost.aws/knowledge-center/glue-s3-endpoint-validation-failed)
+
+This article was very helpfull:
+
+https://docs.aws.amazon.com/glue/latest/dg/vpc-endpoints-s3.html
+
+What is an endpoint? An interface endpoint facilitates the connection between resources within the VPC and AWS services without the need for an Internet Gateway or VPN connection. This helps improve the security and latency of communications between VPC resources and AWS services.
+If I don't create the endpoint, Glue can't access to S3, so I created the endpoint:
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/8bd06e2d-71ae-413f-91c4-dec6b9287a8a)
+
+Then I needed to choose my main VPC:
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/763484a9-ff1b-4b93-8467-3b9528334033)
+
+Then you need add the route tables yourself and it can inherit the ones used by the VPC, like this:
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/c1c91abc-0e5a-4706-9d65-0e5fa40a2d98)
+
+After that I was able to run the job:
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/1234eaaa-21ee-47ed-8e12-974f882df185)
+
+Then I checked in Redshift the situation... and yes! The table was created successfully:
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/b1827b51-f10f-42fc-a007-8e63c17e6075)
+
+
 
