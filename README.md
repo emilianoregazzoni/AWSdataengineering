@@ -30,7 +30,8 @@ As we know, Glue is the main ETL service in AWS. You can use it for extract, tra
 
 In this project I just decided to create a new column, depending on a given column. If a country has more export index, in the new column it will says "Exporting", and if a country has more import index, it will says "Importing".
 I found this simple dataset in Kaggle: https://www.kaggle.com/datasets/samira1992/countries-intermediate-dataset. Thank you Samira Shemirani.
-The format of the dataset is poor, just a .CSV like this: 
+The format of the dataset is poor, just a .CSV like this:
+
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/21f8c1bd-a40d-439c-977c-e2ea25669ea9)
 
 Then I needed to give my personal user and also to a Glue role, the privilege to full access Glue control. This is for my personal user but for also, if in the future I want to create a lambda function that executes glue, then I need to create the role y assign it.
@@ -57,7 +58,9 @@ Now I needed to create the table, using the Crawler, so I created a new Crawler:
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/3a02f74d-834f-448b-b52b-cfa9b9bd6e2d)
 
 I needed to set where the information is stored, in my case, I already created a bucket before, so I've choosen S3 and pasted the route from S3 like this:
-![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/4a037368-0730-4dad-8338-c1dc86b91b37)
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/2b15ce14-2ff0-492e-acee-18b5fc810bf1)
+
 
 Then I needed to select the Glue role I created before to perform.
 
