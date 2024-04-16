@@ -74,3 +74,16 @@ And then I saw the structure of the table created:
 
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/3982da1e-54ca-4534-898e-d05c4f3e0b4e)
 
+I noticed the Crawler created also a "partition":
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/05842aae-10a9-41fe-9880-e18e17b880ad)
+
+A partition is created by Glue when it detects multiple folders in a bucket, it determines the root of a table in the folder structure and which folders are partitions of a table. The name of the table is based on the Amazon S3 prefix or folder name. It's usefull when you need to store data from certain dates, and you want this information later, in a table format, but classified with the data of the upload.
+
+As I created the following structure:
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/8c7d541e-743d-4d2b-bf3c-c2ecf575bf30)
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/82eca292-566e-460f-bcd1-ee61c9aa44f2)
+
+
