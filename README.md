@@ -26,6 +26,7 @@ I have one folder for temporary files created by glue, a folder for data, a fold
 
 ## __Glue section__
 As we know, Glue is the main ETL service in AWS. You can use it for extract, transform, load data and do any transformation you want. Also is a serverless service, which means you can use it without managing any infrastructure, which is really cool and easier for anyone.
+
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/5e549d59-a4f8-4197-851d-315ccaf664c6)
 
 In this project I just decided to create a new column, depending on a given column. If a country has more export index, in the new column it will says "Exporting", and if a country has more import index, it will says "Importing".
@@ -139,6 +140,7 @@ At this time I had all the information and transformations I wanted prepared, re
 ## __Redshift section__
 
 As Amazon says: "Amazon Redshift is a fast, fully managed, petabyte-scale data warehouse service that makes it simple and cost-effective to efficiently analyze all your data using your existing business intelligence tools. It is optimized for datasets ranging from a few hundred gigabytes to a petabyte or more and costs less than $1,000 per terabyte per year, a tenth the cost of most traditional data warehousing solutions."
+
 Redshift is the most powerfull data warehousing solution AWS provides today. Is a must know how to deal with it, so I decided to load a new data warehouse with the country information.
 
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/0a8875d2-507a-40be-97dd-6f3e6b204b2a)
@@ -146,4 +148,18 @@ Redshift is the most powerfull data warehousing solution AWS provides today. Is 
 So I jumped into Redshift:
 
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/be9033ff-70d1-41d0-bac5-47456db11859)
+
+There are 2 ways to work with Redshift, you can work in a serverless way so you don't need to care about cluster management tasks, because is a fully managed services. It's called Redshift Serverless, or you can decide to work with Amazon Redshift that requires manual provisioning and scaling of clusters, demanding more management and static costs.
+When I created the data warehouse I need to choose the "Namespace", namespace is like the name of the database. 
+You just need to set a name and password to connect to database.
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/50e3199e-82f2-4040-a635-7b92f77f6022)
+
+Then I had my Redshift service turned on.
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/3fb94b61-ac02-4261-9945-2c3a0951dff5)
+
+The final step of the job was the load to databaset:
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/2ef1eee9-6bf6-4686-873d-26d87dcd23b6)
 
