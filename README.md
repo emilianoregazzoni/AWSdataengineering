@@ -111,6 +111,25 @@ At this point I ended the uploading process, but know I needed to create the job
 
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/69cf8cb2-8238-4e4e-9175-ed7cc47ad6f6)
 
-I needed to specify the source of information, in this case the new table created and then the interface of Glue allows you to design ETL jobs in a graphic way
+I needed to specify the source of information, in this case the new table created and then the interface of Glue allows you to design ETL jobs in a graphic way:
+
+I set the data catalog configuration:
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/0280befe-d0e1-45b3-ad57-7c368ea3206f)
+
+Now what I wanted is to do a very simple transformation, so that Glue realizes that if the value in exports is greater than imports, then it is an exporting country, otherwise it is an importing country.
 
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/6255ba9d-6c6c-42a7-83c2-9df0f5ac6593)
+
+First I tried in Athena if the logic were ok:
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/947108cd-5acc-4888-bb5e-d0f55e7927e6)
+
+And I got the column in the correct form:
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/ed409633-cf2f-464c-ac0a-8e20685c030b)
+
+So what I needed is just add this code into the step transformation in Glue:
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/f084ff78-3a41-4b58-987c-e08664127e50)
+
