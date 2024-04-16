@@ -87,6 +87,19 @@ As I created the following structure:
 
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/8c7d541e-743d-4d2b-bf3c-c2ecf575bf30)
 
+I got the following partition:
+
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/82eca292-566e-460f-bcd1-ee61c9aa44f2)
 
+## __Athena section__
+
+Athena is one of the AWS which allows you to query data. Is a serverless one, and I think is maybe the easiest service I used:
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/7711f66d-9179-46c1-8857-7e4b40753384)
+
+As you can see in the image, Athena can query from S3 buckets, Glue tables or data catalog (what I did).
+
+I just need to search for Athena, click it and choose the database created previously in Glue, then I was available to query the data:
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/3cca5651-3aeb-483b-9849-f4d4157e5acc)
 
