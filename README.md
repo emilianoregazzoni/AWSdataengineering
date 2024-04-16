@@ -133,3 +133,17 @@ So what I needed is just add this code into the step transformation in Glue:
 
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/f084ff78-3a41-4b58-987c-e08664127e50)
 
+
+At this time I had all the information and transformations I wanted prepared, ready to travel into Redshift.
+
+## __Redshift section__
+
+As Amazon says: "Amazon Redshift is a fast, fully managed, petabyte-scale data warehouse service that makes it simple and cost-effective to efficiently analyze all your data using your existing business intelligence tools. It is optimized for datasets ranging from a few hundred gigabytes to a petabyte or more and costs less than $1,000 per terabyte per year, a tenth the cost of most traditional data warehousing solutions."
+Redshift is the most powerfull data warehousing solution AWS provides today. Is a must know how to deal with it, so I decided to load a new data warehouse with the country information.
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/0a8875d2-507a-40be-97dd-6f3e6b204b2a)
+
+So I jumped into Redshift:
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/be9033ff-70d1-41d0-bac5-47456db11859)
+
