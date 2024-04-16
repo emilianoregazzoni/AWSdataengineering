@@ -107,3 +107,10 @@ And I could see the information with the dataload column created, with this usef
 
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/96990cf8-b271-43c6-b91c-319fe39d8265)
 
+At this point I ended the uploading process, but know I needed to create the job itself:
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/69cf8cb2-8238-4e4e-9175-ed7cc47ad6f6)
+
+I needed to specify the source of information, in this case the new table created and then the interface of Glue allows you to design ETL jobs in a graphic way
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/6255ba9d-6c6c-42a7-83c2-9df0f5ac6593)
