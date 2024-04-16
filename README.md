@@ -101,5 +101,9 @@ As you can see in the image, Athena can query from S3 buckets, Glue tables or da
 
 I just need to search for Athena, click it and choose the database created previously in Glue, then I was available to query the data:
 
-![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/3cca5651-3aeb-483b-9849-f4d4157e5acc)
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/6b676937-f17a-4156-b195-d611b5dccd28)
+
+And I could see the information with the dataload column created, with this usefull behaviour I know when each record was uploaded:
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/96990cf8-b271-43c6-b91c-319fe39d8265)
 
