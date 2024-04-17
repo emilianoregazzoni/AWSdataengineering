@@ -165,7 +165,7 @@ The final step of the job was the load to databaset, the idea is to choose "Drop
 
 Finally the job was this:
 
-![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/72224889-8516-43c1-9902-dc231a1dfe5d)
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/01e0e537-4c12-4674-bdbd-028504491035)
 
 But when I ran the job, I had a problem to deal with. The job failed constantly, it said: 
 
@@ -173,7 +173,7 @@ But when I ran the job, I had a problem to deal with. The job failed constantly,
 
 After reading a lot and investigating I figured out that I needed to create a S3 endpoint:
 
-(https://repost.aws/knowledge-center/glue-s3-endpoint-validation-failed)
+https://repost.aws/knowledge-center/glue-s3-endpoint-validation-failed
 
 This article was very helpfull:
 
@@ -192,6 +192,11 @@ Then you need add the route tables yourself and it can inherit the ones used by 
 
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/c1c91abc-0e5a-4706-9d65-0e5fa40a2d98)
 
+Finally I needed to create a connection in the Glue interface for Redshift. The connection must have the VPC and subnets properly configurated:
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/997e0b1f-ed60-4d61-bfdd-d93db4787296)
+
+
 After that I was able to run the job:
 
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/1234eaaa-21ee-47ed-8e12-974f882df185)
@@ -201,4 +206,32 @@ Then I checked in Redshift the situation... and yes! The table was created succe
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/b1827b51-f10f-42fc-a007-8e63c17e6075)
 
 
+Now I tried some queries to check if everything is running ok:
+
+For example, the top 10 countries with worst numbers about child mortality:
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/a03c4276-fe05-4d12-8126-c2c949990d7c)
+
+The top five countries with most exports:
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/9a6465f0-c908-405f-beaf-6eccb7ddff45)
+
+The top 10 importing countries with highest life expectancy (using the new column created in Glue):
+
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/8db720a3-23b6-4ad0-8d12-6a5bef205001)
+
+## __Costs__
+
+This hands-on costed me around 4 USD, the main service used was Glue and Redshift servlerss, but AWS gives me a 300 USD free credits to use on Redshift with no charge.
+
+## __Conclusions__
+
+This project allowed me to explore some key services for data engineering purposes in AWS. You can work with a lot of more information and do the transformations you want. Glue is a really powerfull tool, you can do wherever you want in a interactive way without any code. Also it allows you to connect data sources out of AWS like BigQuery.
+Redshift is an easy service to use, you can create powerful data warehouses in a very friendly way. You need to know some SQL and you will be fine exploring data.
+It was an amazing experience to any AWS certified. I strongly recommend to start doing this kind of hands-on after the exam to challenge your skills! :blush:
+
+### TIP
+
+Big thanks to Johnny Chivers for your Glue tutorial on Youtube, also to the Cloud Quick Labs channel on Youtube. Also to AWS documentation.
+These 3 sources were my main help to explore and understand the operation of these services.
 
