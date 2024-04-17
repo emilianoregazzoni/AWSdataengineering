@@ -194,8 +194,7 @@ Then you need add the route tables yourself and it can inherit the ones used by 
 
 Finally I needed to create a connection in the Glue interface for Redshift. The connection must have the VPC and subnets properly configurated:
 
-![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/997e0b1f-ed60-4d61-bfdd-d93db4787296)
-
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/9021caa1-3545-4454-a010-eea67c239cec)
 
 After that I was able to run the job:
 
@@ -206,7 +205,7 @@ Then I checked in Redshift the situation... and yes! The table was created succe
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/b1827b51-f10f-42fc-a007-8e63c17e6075)
 
 
-Now I tried some queries to check if everything is running ok:
+Now I tried some easy queries just to check if everything were running ok:
 
 For example, the top 10 countries with worst numbers about child mortality:
 
@@ -230,8 +229,8 @@ This project allowed me to explore some key services for data engineering purpos
 Redshift is an easy service to use, you can create powerful data warehouses in a very friendly way. You need to know some SQL and you will be fine exploring data.
 It was an amazing experience to any AWS certified. I strongly recommend to start doing this kind of hands-on after the exam to challenge your skills! :blush:
 
-### TIP
+### Thank you
 
-Big thanks to Johnny Chivers for your Glue tutorial on Youtube, also to the Cloud Quick Labs channel on Youtube. Also to AWS documentation.
+Big thanks to Johnny Chivers for your Glue tutorial on Youtube, also to the Cloud Quick Labs channel on Youtube. I used also the AWS documentation from these services.
 These 3 sources were my main help to explore and understand the operation of these services.
 
