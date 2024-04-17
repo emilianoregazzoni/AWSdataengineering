@@ -225,7 +225,7 @@ This hands-on costed me around 4 USD, the main service used was Glue and Redshif
 
 ## __Conclusions__
 
-This project allowed me to explore some key services for data engineering purposes in AWS. You can work with a lot of more information and do the transformations you want. Glue is a really powerfull tool, you can do wherever you want in a interactive way without any code. Also it allows you to connect data sources out of AWS like BigQuery.
+This simple project allowed me to explore some key services for data engineering purposes in AWS. You can work with a lot of more information and do the transformations you want. Glue is a really powerfull tool, you can do wherever you want in a interactive way without any code. Also it allows you to connect data sources out of AWS like BigQuery.
 Redshift is an easy service to use, you can create powerful data warehouses in a very friendly way. You need to know some SQL and you will be fine exploring data.
 It was an amazing experience to any AWS certified. I strongly recommend to start doing this kind of hands-on after the exam to challenge your skills! :blush:
 
