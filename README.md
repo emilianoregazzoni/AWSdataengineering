@@ -49,8 +49,7 @@ It helps you to process the data, understand the format it cames, and transform 
 
 But first, before I create the table, I needed to create the database in Glue. Just specify a name and set the route from S3, where you previously stored the .CSV
 
-![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/ed7d84c6-f723-4f2a-aed3-6a56584022b0)
-
+![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/aa78980c-f882-43d8-ad0c-761866b6c58b)
 
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/974fba6b-419c-4b8f-a1b3-05b2ed392adc)
 
@@ -159,7 +158,7 @@ Then I had my Redshift service turned on.
 
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/3fb94b61-ac02-4261-9945-2c3a0951dff5)
 
-The final step of the job was the load to databaset, the idea is to choose "Drop and recreate" the table, because there is no table created. So I wanted to create the table for the first time:
+The final step of the job was the load to databaset, the idea is to choose "Drop and recreate" the table, because there is no table created in Redshift yet. So I wanted to create the table for the first time:
 
 ![image](https://github.com/emilianoregazzoni/AWSdataengineering/assets/20979227/2ef1eee9-6bf6-4686-873d-26d87dcd23b6)
 
